@@ -84,12 +84,9 @@ const HomeScreen = () => {
       <TouchableOpacity style={styles.registerButton} onPress={() => navigation.navigate('CreateAccount')}>
         <Text style={styles.registerButtonText}>Register</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.loginButton}>
+      <TouchableOpacity style={styles.loginButton}onPress={() => navigation.navigate('Login')}>
         <Text style={styles.loginButtonText}>Log in</Text>
       </TouchableOpacity>
-      <Text style={styles.companyText}>
-        Do you represent a company? <Text style={styles.linkText}>Start here</Text>
-      </Text>
       <Text style={styles.termsText}>
         By continuing, you agree to the <Text style={styles.linkText}>Terms of Service</Text> and confirm that you have read our <Text style={styles.linkText}>Privacy Policy</Text>.
       </Text>
@@ -206,7 +203,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#333',
     textAlign: 'center',
-    marginTop: 20,
+    marginTop: 40,
   },
 });
 
