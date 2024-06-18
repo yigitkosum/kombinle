@@ -1,10 +1,9 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+import { Image, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 const Explore = () =>{
     return(
-        <Text>
-            Explore
-        </Text>
+        <Image source={require('@/assets/images/ben.png')} ></Image>
+
     )
 }
 export default Explore;
