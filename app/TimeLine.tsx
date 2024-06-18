@@ -1,10 +1,9 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+import { Image, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 const Timeline = () =>{
     return(
-        <Text>
-            TimeLine
-        </Text>
+        <Image source={require('@/assets/images/furkan.png')} ></Image>
+
     )
 }
 export default Timeline;

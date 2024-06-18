@@ -1,10 +1,8 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+import { Image, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 const Styling = () =>{
     return(
-        <Text>
-            Styling
-        </Text>
+        <Image source={require('@/assets/images/omer.png')} ></Image>
     )
 }
 export default Styling;

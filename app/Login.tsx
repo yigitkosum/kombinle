@@ -6,7 +6,7 @@ import AppLoading from 'expo-app-loading';
 import Checkbox from 'expo-checkbox';
 import { RootStackParamList } from '@/assets/types/navigation';
 import { NavigationProp, useNavigation } from '@react-navigation/native';
-import Welcome from '@/app/HomeScreen';
+import Welcome from '@/app/WelcomeTabs';
 import { CommonActions } from '@react-navigation/native';
 
 const LoginScreen = () => {
@@ -15,7 +15,6 @@ const LoginScreen = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordVisible, setPasswordVisible] = useState(false);
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
     let [fontsLoaded] = useFonts({
         'Montserrat': require('@/assets/fonts/Montserrat-Light.ttf'),
         'MontserratB': require('@/assets/fonts/Montserrat-Bold.ttf'),
@@ -24,15 +23,18 @@ const LoginScreen = () => {
     if (!fontsLoaded) {
         return <AppLoading />;
     }
-    if (isLoggedIn) {
-        return <Welcome />;
-    }
+
     const handleNext = () => {
         if (!email || !password) {
             Alert.alert("Error", "Please fill in all fields and agree to the terms and conditions.");
             return;
         }
-        setIsLoggedIn(true);
+        navigation.dispatch(
+            CommonActions.reset({
+                index: 0,
+                routes: [{ name: 'Welcome' }],
+            })
+        );
     };
    
     return (

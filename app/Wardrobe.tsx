@@ -1,10 +1,9 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
+import { Image, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 const Wardrobe = () =>{
     return(
-        <Text>
-            Wardrobe
-        </Text>
+        <Image source={require('@/assets/images/fatih.png')} ></Image>
+
     )
 }
 export default Wardrobe;
