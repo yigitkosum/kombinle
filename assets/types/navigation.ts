@@ -7,5 +7,11 @@ export type RootStackParamList = {
       email: string;
       password: string;
     };
+    Welcome : undefined;
+    Styling: undefined;
+    Wardrobe:undefined;
+    Planner:undefined;
+    Explore:undefined;
+    Timeline:undefined;
   };
   
